@@ -15,6 +15,10 @@ templates = Jinja2Templates(directory="pages/templates")
 def get_base_page(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
+@router.get("/login")
+def get_base_page(request: Request):
+    return templates.TemplateResponse("login.html", {"request": request})
+
 @router.get("/tests")
 def get_base_page(request: Request):
     return templates.TemplateResponse("tests.html", {"request": request})
@@ -22,10 +26,6 @@ def get_base_page(request: Request):
 @router.get("/raitings")
 def get_base_page(request: Request):
     return templates.TemplateResponse("raitings.html", {"request": request})
-
-@router.get("/login")
-def get_base_page(request: Request):
-    return templates.TemplateResponse("login.html", {"request": request})
 
 @router.get("/students")
 def get_base_page(request: Request):
