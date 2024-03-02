@@ -1,95 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CodePen - Sign-Up/Login Form</title>
-  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="{{ url_for('static', path='login.css') }}">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='login.css') }}">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="form">
-      
-      <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Sign Up</a></li>
-        <li class="tab"><a href="#login">Log In</a></li>
-      </ul>
-      
-      <div class="tab-content">
-        <div id="signup">   
-          <h1>Sign Up for Free</h1>
-          
-          <form action="/" method="post">
-          
-          <div class="top-row">
-            <div class="field-wrap">
-              <label>
-                First Name<span class="req">*</span>
-              </label>
-              <input type="text" required autocomplete="off" />
-            </div>
-        
-            <div class="field-wrap">
-              <label>
-                Last Name<span class="req">*</span>
-              </label>
-              <input type="text"required autocomplete="off"/>
-            </div>
-          </div>
+    <div class="container">
+        <form id="login-form" class="form">
+            <h1>Login</h1>
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" name="login-username" required>
+            
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="login-password" required>
+            
+            <label for="remember-me">Remember me</label>
+            <input type="checkbox" id="remember-me" name="remember-me">
+            
+            <button type="button" onclick="login()">Login</button>
+        </form>
 
-          <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email"required autocomplete="off"/>
-          </div>
-          
-          <div class="field-wrap">
-            <label>
-              Set A Password<span class="req">*</span>
-            </label>
-            <input type="password"required autocomplete="off"/>
-          </div>
-          
-          <button type="submit" class="button button-block"/>Get Started</button>
-          
-          </form>
+        <form id="signup-form" class="form">
+            <h1>Sign Up</h1>
+            <label for="signup-fullname">Full Name:</label>
+            <input type="text" id="signup-fullname" name="signup-fullname" required>
 
-        </div>
-        
-        <div id="login">   
-          <h1>Welcome Back!</h1>
-          
-          <form action="/" method="post">
-          
-            <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email"required autocomplete="off"/>
-          </div>
-          
-          <div class="field-wrap">
-            <label>
-              Password<span class="req">*</span>
-            </label>
-            <input type="password"required autocomplete="off"/>
-          </div>
-          
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
-          
-          <button class="button button-block"/>Log In</button>
-          
-          </form>
+            <label for="signup-email">Email:</label>
+            <input type="email" id="signup-email" name="signup-email" required>
+            
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="signup-password" required>
 
-        </div>
-        
-      </div><!-- tab-content -->
-      
-</div> <!-- /form -->
-<!-- partial -->
-  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="{{ url_for('js', path='login.js') }}"></script>
+            <label for="faculty">Faculty:</label>
+            <select id="faculty" name="faculty" required>
+                <option value="" disabled selected>Select Faculty</option>
+                <option value="engineering">Кібербезпека</option>
+                <option value="science">Комп. науки</option>
+                <option value="arts">Телекомунікація</option>
+            </select>
+            
+            <label for="course">Course:</label>
+            <input type="checkbox" id="course-1" name="course-1">
+            <label for="course-1">1</label>
+            <input type="checkbox" id="course-2" name="course-2">
+            <label for="course-2">2</label>
+            <input type="checkbox" id="course-3" name="course-3">
+            <label for="course-3">3</label>
+            <input type="checkbox" id="course-4" name="course-4">
+            <label for="course-4">4</label>
 
+            <select id="group" name="Group" required>
+                <option value="" disabled selected>Обрати групу</option>
+                <option value="engineering">С-91</option>
+                <option value="science">С-02</option>
+                <option value="arts">С-22</option>
+            </select>
+            
+            <button type="button" onclick="signup()">Sign Up</button>
+        </form>
+    </div>
+    <script src="{{url_for('js', path='login.js')}}"></script>
 </body>
 </html>
