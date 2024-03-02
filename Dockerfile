@@ -1,7 +1,7 @@
 FROM python:3.9
 
 # 
-WORKDIR /hack-sk1
+WORKDIR /int20-evo
 
 # 
 COPY ./requirements.txt .
