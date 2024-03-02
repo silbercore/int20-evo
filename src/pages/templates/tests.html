@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Rishabh Mishra</title>
+  <link rel="stylesheet" href="{{ url_for('static', path='tests.css') }}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Quiz Creator</h1>
+
+  <div class="addQuestions">
+
+    <input id="questionInput" type="text" placeholder="Question">
+
+    <input id="correctInput" type="text" placeholder="Correct Answer">
+
+    <input id="wrongOneInput" type="text" placeholder="Wrong Answer 1">
+
+    <input id="wrongTwoInput" type="text" placeholder="Wrong Answer 2"><br>
+
+    <button onclick="handlers.addQuestion()">Add Question</button>
+
+  </div>
+
+  <div class="info">
+
+    <li id="NumberQuestionsInQuiz">You currently have 0 questions added to your quiz</li>
+
+    <button onclick="view.displayQuestions()" id="startQuiz">Start Quiz</button>
+
+  </div>
+
+  <p class="answersCorrect"></p>
+
+  <div class="questionsWrapper"></div>
+<!-- partial -->
+  <script  src="{{url_for('js', path='tests.js')}}"></script>
+
+</body>
+</html>
