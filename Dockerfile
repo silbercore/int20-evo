@@ -1,3 +1,5 @@
+ENV NO_AT_BRIDGE=1
+
 FROM python:3.9
 
 # 
