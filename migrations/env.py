@@ -9,8 +9,7 @@ from sqlalchemy import pool
 sys.path.append(os.path.join(sys.path[0], 'src'))
 
 from auth.models import *   
-from ivent.models import *
-from participant.models import *
+from exams.models import *
 from database import metadata, Base
 from config import DB_HOST, DB_NAME, DB_PASSWORD, DB_PORT, DB_USER
 

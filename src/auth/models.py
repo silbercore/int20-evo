@@ -22,6 +22,8 @@ class User(SQLAlchemyBaseUserTable[int], Base):
     faculty = Column(String, nullable=False)
     group = Column(String, nullable=False)
     kyrs = Column(String, nullable=False)
-    gender = Column(String, nullable=False)
+    gender = Column(String, nullable=False) 
+
+
     # ivents = relationship("Ivent", secondary='user_ivent', back_populates="users")
     # bets = relationship("Bet", back_populates="user")

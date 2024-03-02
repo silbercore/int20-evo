@@ -51,6 +51,9 @@ class UserManager(IntegerIDMixin, BaseUserManager[User, int]):
         password = user_dict.pop("password")
         user_dict["hashed_password"] = self.password_helper.hash(password)
 
+        registered_at = user_dict.pop("registered_at")
+        user_dict["registered_at"] = registered_at.replace(tzinfo=None)
+
         created_user = await self.user_db.create(user_dict)
 
         await self.on_after_register(created_user, request)

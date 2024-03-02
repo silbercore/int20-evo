@@ -18,9 +18,14 @@
          alt="">
     <div class="ms-2">
       <h5 class="fs-6 mb-0">
-        <a class="text-decoration-none" href="#">Боб Бобович</a>
+        <a class="text-decoration-none" href="#">{{user.name}}</a>
       </h5>
       <p class="mt-1 mb-0">Курсант С-00 125 спецільність </p>
+      {% if user.role == "teacher" %}
+      
+      {% elif user.role == "student" %}
+
+      {% endif %}
     </div>
   </div>
 

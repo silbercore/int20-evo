@@ -5,7 +5,7 @@ from auth.manager import get_user_manager
 from config import SECRET_COOK
 
 
-cookie_transport = CookieTransport(cookie_name="HackSK1", cookie_max_age=3600)
+cookie_transport = CookieTransport(cookie_name="INT20", cookie_max_age=3600)
 
 def get_jwt_strategy() -> JWTStrategy:
     return JWTStrategy(secret=SECRET_COOK, lifetime_seconds=3600, algorithm="HS256")

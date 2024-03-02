@@ -4,6 +4,7 @@ from auth.auth import auth_backend, fastapi_users
 from auth.schema import UserCreate, UserRead, UserUpdate
 from fastapi.middleware.cors import CORSMiddleware
 from pages.router import router as page_router
+from exams.router import router as exam_router
 
 import ssl
 
@@ -28,6 +29,7 @@ app.include_router(
 )
 
 app.include_router(page_router)
+app.include_router(exam_router)
 app.mount("/static", StaticFiles(directory="pages/static"), name="static")
 app.mount("/js", StaticFiles(directory="pages/js"), name="js")
 
