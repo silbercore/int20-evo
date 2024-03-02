@@ -2,13 +2,12 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Dashboard</title>
+  <title>Навігатор знань</title>
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css'>
 <link rel='stylesheet' href='https://unicons.iconscout.com/release/v3.0.6/css/line.css'><link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
 
 </head>
 <body>
-<!-- partial:index.partial.html -->
 <aside class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
   <i class="uil-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1"></i>
   <div class="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
@@ -19,9 +18,9 @@
          alt="">
     <div class="ms-2">
       <h5 class="fs-6 mb-0">
-        <a class="text-decoration-none" href="#">Jone Doe</a>
+        <a class="text-decoration-none" href="#">Боб Бобович</a>
       </h5>
-      <p class="mt-1 mb-0">Lorem ipsum dolor sit amet consectetur.</p>
+      <p class="mt-1 mb-0">Курсант С-00 125 спецільність </p>
     </div>
   </div>
 
@@ -32,7 +31,7 @@
 
   <ul class="categories list-unstyled">
     <li class="has-dropdown">
-      <i class="uil-estate fa-fw"></i><a href="#"> Dashboard</a>
+      <i class="uil-estate fa-fw"></i><a href="#"> ГОЛОВНА</a>
       <ul class="sidebar-dropdown list-unstyled">
         <li><a href="#">Lorem ipsum</a></li>
         <li><a href="#">ipsum dolor</a></li>
@@ -42,82 +41,17 @@
       </ul>
     </li>
     <li class="">
-      <i class="uil-folder"></i><a href="#"> File manager</a>
+      <i class="uil-folder"></i><a href="#">ТЕСТИ</a>
     </li>
+    
     <li class="has-dropdown">
-      <i class="uil-calendar-alt"></i><a href="#"> Calender</a>
+      <i class="uil-panel-add"></i><a href="#"> ЖУРНАЛ</a>
       <ul class="sidebar-dropdown list-unstyled">
         <li><a href="#">Lorem ipsum</a></li>
         <li><a href="#">ipsum dolor</a></li>
         <li><a href="#">dolor ipsum</a></li>
         <li><a href="#">amet consectetur</a></li>
         <li><a href="#">ipsum dolor sit</a></li>
-      </ul>
-    </li>
-    <li class="has-dropdown">
-      <i class="uil-envelope-download fa-fw"></i><a href="#"> Mailbox</a>
-      <ul class="sidebar-dropdown list-unstyled">
-        <li><a href="#">Lorem ipsum</a></li>
-        <li><a href="#">ipsum dolor</a></li>
-        <li><a href="#">dolor ipsum</a></li>
-        <li><a href="#">amet consectetur</a></li>
-        <li><a href="#">ipsum dolor sit</a></li>
-      </ul>
-    </li>
-    <li class="has-dropdown">
-      <i class="uil-shopping-cart-alt"></i><a href="#"> Ecommerce</a>
-      <ul class="sidebar-dropdown list-unstyled">
-        <li><a href="#">Lorem ipsum</a></li>
-        <li><a href="#">ipsum dolor</a></li>
-        <li><a href="#">dolor ipsum</a></li>
-        <li><a href="#">amet consectetur</a></li>
-        <li><a href="#">ipsum dolor sit</a></li>
-      </ul>
-    </li>
-    <li class="has-dropdown">
-      <i class="uil-bag"></i><a href="#"> Projects</a>
-      <ul class="sidebar-dropdown list-unstyled">
-        <li><a href="#">Lorem ipsum</a></li>
-        <li><a href="#">ipsum dolor</a></li>
-        <li><a href="#">dolor ipsum</a></li>
-        <li><a href="#">amet consectetur</a></li>
-        <li><a href="#">ipsum dolor sit</a></li>
-      </ul>
-    </li>
-    <li class="">
-      <i class="uil-setting"></i><a href="#"> Settings</a>
-      <ul class="sidebar-dropdown list-unstyled">
-        <li><a href="#">Lorem ipsum</a></li>
-        <li><a href="#">ipsum dolor</a></li>
-        <li><a href="#">dolor ipsum</a></li>
-        <li><a href="#">amet consectetur</a></li>
-        <li><a href="#">ipsum dolor sit</a></li>
-      </ul>
-    </li>
-    <li class="has-dropdown">
-      <i class="uil-chart-pie-alt"></i><a href="#"> Components</a>
-      <ul class="sidebar-dropdown list-unstyled">
-        <li><a href="#">Lorem ipsum</a></li>
-        <li><a href="#">ipsum dolor</a></li>
-        <li><a href="#">dolor ipsum</a></li>
-        <li><a href="#">amet consectetur</a></li>
-        <li><a href="#">ipsum dolor sit</a></li>
-      </ul>
-    </li>
-    <li class="has-dropdown">
-      <i class="uil-panel-add"></i><a href="#"> Charts</a>
-      <ul class="sidebar-dropdown list-unstyled">
-        <li><a href="#">Lorem ipsum</a></li>
-        <li><a href="#">ipsum dolor</a></li>
-        <li><a href="#">dolor ipsum</a></li>
-        <li><a href="#">amet consectetur</a></li>
-        <li><a href="#">ipsum dolor sit</a></li>
-      </ul>
-    </li>
-    <li class="">
-      <i class="uil-map-marker"></i><a href="#"> Maps</a>
-    </li>
-  </ul>
 </aside>
 
 <section id="wrapper">
@@ -230,7 +164,6 @@
       <div class="row">
         <div class="col-md-6">
           <div class="box">
-            <!-- <h4>Admins:</h4> -->
             <div class="admin d-flex align-items-center rounded-2 p-3 mb-4">
               <div class="img">
                 <img class="img-fluid rounded-pill"
@@ -356,8 +289,7 @@
     </section>
   </div>
 </section>
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js'></script>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.jshttps://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script><script  src="{{url_for('js', path='script.js')}}"></script>
 
 </body>
